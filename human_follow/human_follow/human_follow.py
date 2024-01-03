@@ -8,7 +8,7 @@ class ObjectInformationSubscriber(Node):
         self.subscription = self.create_subscription(
             ObjectInformation, '/human_detector/object_informations',
             self.callback, 10)
-        self.subscription  # keep reference to subscription object
+        self.subscription  
         self.get_logger().info('Subscribed to /human_detector/object_informations topic')
 
     def callback(self, msg):

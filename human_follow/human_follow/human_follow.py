@@ -1,12 +1,12 @@
 import rclpy
 from rclpy.node import Node
-from your_package_name.msg import ObjectInformation 
+from perception_interfaces.msg import ObjectInformationArray
 
 class ObjectInformationSubscriber(Node):
     def __init__(self):
         super().__init__('object_information_subscriber')
         self.subscription = self.create_subscription(
-            ObjectInformation, '/human_detector/object_informations',
+            ObjectInformationArray, '/human_detector/object_informations',
             self.callback, 10)
         self.subscription  
         self.get_logger().info('Subscribed to /human_detector/object_informations topic')

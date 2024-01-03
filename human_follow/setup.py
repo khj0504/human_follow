@@ -20,7 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'human_follow = human_follow.human_follow:main'
+            'object_information_subscriber = human_follow.ObjectInformationSubscriber:main' # '노드이름 = 패키지명.파일명:실행할_함수'
         ],
     },
 )
